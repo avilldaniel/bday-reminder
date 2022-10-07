@@ -2,8 +2,6 @@ import { createSlice } from "@reduxjs/toolkit";
 
 // Function that gets theme
 const getTheme = () => {
-  // const theme = `${window?.localStorage?.getItem("theme")}`;
-  // const theme = window?.localStorage?.getItem("theme");
   const theme =
     typeof window !== "undefined" && window.localStorage.getItem("theme");
 
@@ -16,17 +14,10 @@ const getTheme = () => {
       return "light";
     }
   }
-  // if (theme && ["light", "dark"].includes(theme)) {
-  //   return theme;
-  // }
-
-  // const userMedia = window.matchMedia("(prefers-color-scheme: light)");
-  // if (userMedia.matches) {
-  //   return "light";
-  // }
   return "dark";
 };
 
+// Theme state interface
 export interface themeState {
   value: string;
 }
