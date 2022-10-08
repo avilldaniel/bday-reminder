@@ -1,5 +1,6 @@
 import type { FC, ReactNode } from "react";
 import Nav from "./Nav";
+import Meta from "./Meta";
 
 interface LayoutProps {
   children: ReactNode;
@@ -8,6 +9,7 @@ interface LayoutProps {
 const Layout: FC<LayoutProps> = ({ children }) => {
   return (
     <>
+      <Meta />
       <Nav />
       {children}
     </>
