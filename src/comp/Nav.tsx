@@ -12,7 +12,7 @@ const Nav: FC<NavProps> = ({}) => {
   useEffect(() => {
     document.documentElement.dataset.theme = theme;
     localStorage.setItem("theme", theme);
-    console.log({ theme });
+    // console.log({ theme });
   }, [theme]);
 
   const toggleTheme = () => {
