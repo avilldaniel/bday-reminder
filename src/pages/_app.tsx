@@ -3,6 +3,7 @@ import "../styles/globals.css";
 import { store } from "../utils/store";
 import { Provider } from "react-redux";
 import Layout from "../comp/Layout";
+import { trpc } from "../utils/trpc";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -14,4 +15,4 @@ function MyApp({ Component, pageProps }: AppProps) {
   );
 }
 
-export default MyApp;
+export default trpc.withTRPC(MyApp);
